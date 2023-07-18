@@ -4,14 +4,15 @@ import { useNavigate } from "react-router-dom";
 
 
 function DietEdit() {
-    const { dietsid } = useParams();
+    const { dietId } = useParams();
+    console.log(dietId)
     const [ediDiet, setEditDiet] = useState({})
     const navigate = useNavigate()
     //const handleChange = (e) => setEditToDo({ ...editToDo, [e.target.do]: e.target.value })
 
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/${dietsid}`);
+            let myDiets = await fetch(`http://localhost:8000/api/${dietId}`);
             myDiets = await myDiets.json()
             setEditDiet(myDiets);
         } catch(err) {
@@ -35,7 +36,7 @@ function DietEdit() {
         // console.log(editForm)
         try {
             e.preventDefault();
-            await fetch(`http://localhost:8000/api/${dietsid}`, {
+            await fetch(`http://localhost:8000/api/${dietId}`, {
 
             method: "PUT",
             headers: {

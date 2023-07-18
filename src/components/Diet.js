@@ -130,7 +130,7 @@ const Diet = (props) =>{
                     <diet di={di} />
                     
                   
-                    <Card className='card'>
+                    <Card className='card7'>
                         
                         <Card.Body className='cb'>
                             <Card.Title>Date: {di.date}</Card.Title>

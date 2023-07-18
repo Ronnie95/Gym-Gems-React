@@ -4,12 +4,18 @@ import Button from 'react-bootstrap/Button';
 
 function DietShow () {
     const [diets, setDiets] = useState([]);
-    const { dietsid } = useParams();
-    console.log(dietsid)
+    const { dietId } = useParams();
+    console.log(dietId)
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/id`);
-            myDiets = await diets.json()
+            let myDiets = await fetch(`http://localhost:8000/api/${dietId}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+            myDiets = await myDiets.json()
+            console.log(myDiets)
             setDiets(myDiets);
         } catch(err) {
             console.log(err);
@@ -25,7 +31,7 @@ function DietShow () {
              <div className="do">
                 <h1>My View</h1>
                 <h2>{diets.breakfast}</h2>
-              <Link to={`/${dietsid}/edit`}><Button variant="success">Edit</Button>{' '}</Link> <Link to={`/${dietsid}/delete`}><Button variant="success">Delete</Button>{' '}</Link>
+              <Link to={`/diet/${dietId}/edit`}><Button variant="success">Edit</Button>{' '}</Link> <Link to={`/${dietId}/delete`}><Button variant="success">Delete</Button>{' '}</Link>
                 </div>
             
             </>

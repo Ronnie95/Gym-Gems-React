@@ -3,13 +3,13 @@ import { useParams } from "react-router-dom";
 import { Button } from "react-bootstrap";
 
 function DietDelete() {
-    const {dietsid} = useParams();
+    const {dietId} = useParams();
 
     async function removeDiet() {
         //console.log("fi")
         try {
             // Make an API call to the DELETE route!
-            await fetch(`http://localhost:8000/api/${dietsid}`, {
+            await fetch(`http://localhost:8000/api/${dietId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"
@@ -27,7 +27,7 @@ function DietDelete() {
                 <Link to={`/diet`}><Button variant="danger" onClick={removeDiet}>YES</Button></Link>
                 
         
-            <Link to={`/${dietsid}`}>
+            <Link to={`/${dietId}`}>
             <Button variant="success">NO</Button>{' '}
 
             </Link>

@@ -123,7 +123,7 @@ const Workouts = (props) =>{
                   
                     <Card>
                         
-                        <Card.Body>
+                        <Card.Body className='cb'>
                             <Card.Title>{work.date}</Card.Title>
                             <Card.Text>
                      <ul>

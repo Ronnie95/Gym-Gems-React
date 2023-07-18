@@ -1,4 +1,6 @@
 import { useState,useEffect } from "react";
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
 //import { Button } from "react-bootstrap";
 //import { useParams } from "react-router-dom";
 //import { Link, useParams } from "react-router-dom";
@@ -6,32 +8,67 @@ import { useState,useEffect } from "react";
 
 
 function ApiNinja () {
-const [api, setApi] = useState([])
-//const {apiId} = useParams
-async function getApi() {
-    try{
-        let myApi = await fetch(`https://sport-flask.p.rapidapi.com/sport`);
-        myApi = await myApi.json()
-        setApi(myApi);
-    } catch(err) {
-        console.log(err);
+    const [ex, setEx ] = useState([])
+    const url = 'https://exercisedb.p.rapidapi.com/exercises';
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': '05c0b0e6c5msh734830410de9d06p10e087jsn21bf4d482e73',
+            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+        }
+    };
+    async function appp() {
+
+        try {
+            const response = await fetch(url, options);
+            const result = await response.json();
+            setEx(result)
+          //  console.log(result);
+        } catch (error) {
+            console.error(error);
+        }
+
+
+
     }
-}
-useEffect(() => {
-    getApi();
-  }, [])
+    useEffect(()=>{appp()}, []);
+    console.log(ex)
 
-  return(
-     <>
-      <div className="do">
-         <h1>My View</h1>
-         <h2>{api.name}</h2>
-      
-         </div>
-     
-     </>
 
- )
+    return(
+        <div>
+            {ex.map((exs, idx) => {
+                return (
+                    <div key={idx}>
+                        <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src={exs.gifUrl} alt="image" />                        
+      <Card.Body>
+        <Card.Title>{exs.bodyPart} exercise</Card.Title>
+        <Card.Text>
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </Card.Text>
+      </Card.Body>
+      <ListGroup className="list-group-flush">
+        <ListGroup.Item>Equipment: {exs.equipment}</ListGroup.Item>
+    
+      </ListGroup>
+      <Card.Body>
+      </Card.Body>
+    </Card>
+                                              
+                    </div>
+                    )
+                })}
+        </div>
+    )
+    
+
+
+
+
+
+    
 }
 
 export default ApiNinja
