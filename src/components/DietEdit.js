@@ -12,7 +12,7 @@ function DietEdit() {
 
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/${dietId}`);
+            let myDiets = await fetch(`http://localhost:8000/api/${dietId}/`);
             myDiets = await myDiets.json()
             setEditDiet(myDiets);
         } catch(err) {
@@ -36,7 +36,7 @@ function DietEdit() {
         // console.log(editForm)
         try {
             e.preventDefault();
-            await fetch(`http://localhost:8000/api/${dietId}`, {
+            await fetch(`http://localhost:8000/api/${dietId}/`, {
 
             method: "PUT",
             headers: {

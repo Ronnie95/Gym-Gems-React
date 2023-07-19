@@ -122,6 +122,7 @@ p{
 
 
 
+
 .card .container {
   display: flex;
   flex: 1;
@@ -148,4 +149,18 @@ p{
   100% {
     transform: translate(-100%, -100%) translate3d(0, 0, 0);
   }
+}
+
+.dd{
+color: #282c34;
+}
+
+.show {
+  color: beige;
+}
+
+.cards.card {
+
+  display: inline-block;
+  background-color: #282c34;
 }

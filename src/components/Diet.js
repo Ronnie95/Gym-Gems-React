@@ -136,7 +136,7 @@ const Diet = (props) =>{
                             <Card.Title>Date: {di.date}</Card.Title>
                             <Card.Text>
                      <ul>
-                        <li>Breakfast: {di.breakfast}</li>
+                        <li classname="dd">Breakfast: {di.breakfast}</li>
                         <li>Lunch: {di.lunch}</li>
                         <li>Dinner: {di.dinner}</li>
                         <li>Snack: {di.snack}</li>

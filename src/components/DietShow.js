@@ -8,7 +8,7 @@ function DietShow () {
     console.log(dietId)
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/${dietId}`, {
+            let myDiets = await fetch(`http://localhost:8000/api/${dietId}/`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -30,8 +30,17 @@ function DietShow () {
             <>
              <div className="do">
                 <h1>My View</h1>
-                <h2>{diets.breakfast}</h2>
-              <Link to={`/diet/${dietId}/edit`}><Button variant="success">Edit</Button>{' '}</Link> <Link to={`/${dietId}/delete`}><Button variant="success">Delete</Button>{' '}</Link>
+                
+                <ul>
+                    <li className="show">{diets.breakfast}</li>
+                    <li className="show">{diets.lunch}</li>
+                    <li className="show">{diets.dinner}</li>
+                    <li className="show">{diets.snack}</li>
+                    <li className="show">{diets.hydration}</li>
+                    <li className="show">{diets.date}</li>
+                    
+                </ul>
+              <Link to={`/diet/${dietId}/edit`}><Button variant="success">Edit</Button>{' '}</Link> <Link to={`/diet/${dietId}/delete`}><Button variant="success">Delete</Button>{' '}</Link>
                 </div>
             
             </>

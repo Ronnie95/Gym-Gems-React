@@ -9,7 +9,7 @@ function DietDelete() {
         //console.log("fi")
         try {
             // Make an API call to the DELETE route!
-            await fetch(`http://localhost:8000/api/${dietId}`, {
+            await fetch(`http://localhost:8000/api/${dietId}/`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

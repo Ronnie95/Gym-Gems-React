@@ -118,7 +118,7 @@ const Workouts = (props) =>{
             return(
                 <div key={idx}>
 
-                    <workout work={work} />
+                    
                     
                   
                     <Card>
