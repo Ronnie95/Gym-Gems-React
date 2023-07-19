@@ -44,10 +44,7 @@ function ApiNinja () {
       <Card.Img variant="top" src={exs.gifUrl} alt="image" />                        
       <Card.Body>
         <Card.Title>{exs.bodyPart} exercise</Card.Title>
-        <Card.Text>
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </Card.Text>
+        
       </Card.Body>
       <ListGroup className="list-group-flush">
         <ListGroup.Item>Equipment: {exs.equipment}</ListGroup.Item>

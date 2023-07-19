@@ -7,6 +7,14 @@ function Home() {
 return( 
 
     <>
+    <div>
+    <img className='II'src="/images/gym1.jpg" alt="" /> 
+   <img className='II' src="/images/gym2.jpg" alt="" /> 
+   <img className='II' src="/images/gym3.jpg" alt="" /> 
+
+
+
+    </div>
      <Card className='cards' style={{ width: '18rem' }}>
       <Card.Img variant="top" src="/images/gym5.jpg" alt="" />
       <Card.Body>
@@ -17,7 +25,7 @@ return(
         <ListGroup.Item>View hundreds of workouts</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/workoutff`}><Button variant="primary">View</Button></Link></Card.Link>
+        <Card.Link href="#"> <Link to={`/workoutff`}><Button variant="outline-dark">View</Button></Link></Card.Link>
       </Card.Body>
     </Card>
     <Card className='cards' style={{ width: '18rem' }}>
@@ -29,7 +37,7 @@ return(
         <ListGroup.Item>Track your meals here</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/diet`}><Button variant="primary">View</Button></Link></Card.Link>
+        <Card.Link href="#"> <Link to={`/diet`}><Button variant="outline-dark">View</Button></Link></Card.Link>
       </Card.Body>
     </Card>
     <Card className='cards' style={{ width: '18rem' }}>
@@ -41,7 +49,7 @@ return(
         <ListGroup.Item>Log your Workouts</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/workout`}><Button variant="primary">View</Button></Link></Card.Link>
+        <Card.Link href="#"> <Link to={`/workout`}><Button variant="outline-dark">View</Button></Link></Card.Link>
       </Card.Body>
     </Card>
   </>

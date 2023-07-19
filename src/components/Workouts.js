@@ -18,7 +18,7 @@ const Workouts = (props) =>{
     })
     const [workout, setWorkout] = useState([])
 
-		const BASE_URL = "http://localhost:8000/api/workout";
+		const BASE_URL = "http://localhost:8000/api/workout/";
 
     const getWorkout = async () => {
         try {
@@ -45,7 +45,7 @@ const Workouts = (props) =>{
         // prevent reloading
         e.preventDefault();
         try{
-            const myWorkout = await fetch(`http://localhost:8000/api/workout`, {
+            const myWorkout = await fetch(`http://localhost:8000/api/workout/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -68,6 +68,14 @@ const Workouts = (props) =>{
         <section>
 
         <form className="ffz"onSubmit={handleSubmit}>
+        <input 
+                type ="text"
+                name='id'
+                value={workoutForm.id}
+                placeholder="workout #"
+                onChange={handleChange}
+                
+                />
             <input 
                 type ="text"
                 name='body_part'
@@ -134,7 +142,7 @@ const Workouts = (props) =>{
                         <li>{work.date}</li>
                     </ul>
                             </Card.Text>
-                            <Link to={`/workout/${work.id}`}><Button variant="primary">View</Button></Link> 
+                            <Link to={`/workout/${work.id}`}><Button variant="outline-dark">View</Button></Link> 
                         </Card.Body>
                         </Card>
                 

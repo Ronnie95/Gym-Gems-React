@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 const Diet = (props) =>{
 
     const [dietForm, setDietForm] = useState({
+        id: "",
         breakfast: "",
         lunch: "",
         dinner: "",
@@ -19,7 +20,7 @@ const Diet = (props) =>{
     })
     const [diet, setDiet] = useState([])
 
-		const BASE_URL = "http://localhost:8000/api";
+		const BASE_URL = "http://localhost:8000/api/";
 
     const getDiet = async () => {
         try {
@@ -46,7 +47,7 @@ const Diet = (props) =>{
         // prevent reloading
         e.preventDefault();
         try{
-            const myDiet = await fetch(`http://localhost:8000/api`, {
+            const myDiet = await fetch(`http://localhost:8000/api/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
@@ -69,6 +70,14 @@ const Diet = (props) =>{
         <section>
 
         <form className="ff"onSubmit={handleSubmit}>
+        <input 
+                type ="text"
+                name='id'
+                value={dietForm.id}
+                placeholder="Meal #"
+                onChange={handleChange}
+                
+                />
             <input 
                 type ="text"
                 name='breakfast'
@@ -144,7 +153,7 @@ const Diet = (props) =>{
                         <li>{di.date}</li>
                     </ul>
                             </Card.Text>
-                            <Link to={`/diet/${di.id}`}><Button variant="primary">View</Button></Link> 
+                            <Link to={`/diet/${di.id}`}><Button variant="outline-dark">View</Button></Link> 
                         </Card.Body>
                         </Card>
                 

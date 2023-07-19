@@ -29,7 +29,7 @@ function DietShow () {
          return(
             <>
              <div className="do">
-                <h1>My View</h1>
+                <h1 classname="title1"> My Diet</h1>
                 
                 <ul>
                     <li className="show">{diets.breakfast}</li>
@@ -40,7 +40,7 @@ function DietShow () {
                     <li className="show">{diets.date}</li>
                     
                 </ul>
-              <Link to={`/diet/${dietId}/edit`}><Button variant="success">Edit</Button>{' '}</Link> <Link to={`/diet/${dietId}/delete`}><Button variant="success">Delete</Button>{' '}</Link>
+              <Link to={`/diet/${dietId}/edit`}><Button variant="dark">Edit</Button>{' '}</Link> <Link to={`/diet/${dietId}/delete`}><Button variant="dark">Delete</Button>{' '}</Link>
                 </div>
             
             </>

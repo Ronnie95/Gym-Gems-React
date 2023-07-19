@@ -52,7 +52,7 @@ function DietEdit() {
         } 
         return (
             <>
-            <h1>Edit</h1>
+            <h1>Edit your meal</h1>
             
             
             <form onSubmit={handleSubmit}>
@@ -104,7 +104,7 @@ function DietEdit() {
                 value={ediDiet.date}
                 placeholder="Date"
                 onChange={handleChange} />
-                                <button>Edit</button>
+                                <input type ="submit" value="Do It" />
                             </form> 
             </>
             

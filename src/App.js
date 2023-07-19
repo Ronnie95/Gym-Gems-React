@@ -11,22 +11,23 @@ import ApiNinja from './components/ApiNinja';
 import WorkoutEdit from './components/WorkoutsEdit';
 import WorkoutDelete from './components/WorkoutsDelete';
 import Home from './components/Home';
+import Button from 'react-bootstrap/Button';
+import { Link } from "react-router-dom";
+
 
 function App() {
   return (
  
  <div className="App">
     <ul className='u'>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="news.asp">Diet</a></li>
-  <li><a href="contact.asp">Workouts</a></li>
+  <li><Link to={`/home`}><Button variant="dark">Home</Button></Link></li>
+  <li><Link to={`/workout`}><Button variant="dark">Workout Log</Button></Link></li>
+  <li><Link to={`/diet`}><Button variant="dark">Meal Log</Button></Link></li>
 </ul>
     <div className='imgs'>
 
     <img src="/images/gym.jpg" alt="" />
-  <img className='II'src="/images/gym1.jpg" alt="" /> 
-   <img className='II' src="/images/gym2.jpg" alt="" /> 
-   <img className='II' src="/images/gym3.jpg" alt="" /> 
+  
     </div>
   
 

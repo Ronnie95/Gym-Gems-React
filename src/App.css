@@ -48,7 +48,7 @@
 }
 
 .cb {
-  background-color: burlywood;
+  background-color:rgb(182, 140, 84);
   
 }
 li {
@@ -68,6 +68,7 @@ input {
   border-color: #deb887;
   color: burlywood;
   align-items: center;
+  
 }
 
 ::placeholder{
@@ -162,5 +163,24 @@ color: #282c34;
 .cards.card {
 
   display: inline-block;
-  background-color: #282c34;
+  background-color: rgb(182, 140, 84);
+  border-color: burlywood;
+  margin-right: 150px;
+  margin-top: 100x;
+}
+
+.list-group-item.list-group-item {
+  color: burlywood;
+  background-color: black;
+}
+
+.btn-dark.btn-dark{
+  background-color: rgb(182, 140, 84);
+  border-color: black;
+  color: black;
+  
+}
+.ffz {
+  align-items: center;
+  display: inline;
 }

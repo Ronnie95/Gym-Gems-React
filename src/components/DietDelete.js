@@ -27,7 +27,7 @@ function DietDelete() {
                 <Link to={`/diet`}><Button variant="danger" onClick={removeDiet}>YES</Button></Link>
                 
         
-            <Link to={`/${dietId}`}>
+            <Link to={`/diet/${dietId}`}>
             <Button variant="success">NO</Button>{' '}
 
             </Link>
