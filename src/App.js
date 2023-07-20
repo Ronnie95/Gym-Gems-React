@@ -24,9 +24,9 @@ function App() {
 
   <ul className='u'>
   <li><Link to={'/home'}><Button variant="dark">Home</Button></Link></li>
-  <li><Link to={`/workout`}><Button variant="dark">Workout Tracker</Button></Link></li>
-  <li><Link to={`/diet`}><Button variant="dark">Meal Log</Button></Link></li>
-  <li><Link to={`/workoutff`}><Button variant="dark">Workout Inspiration</Button></Link></li>
+  <li><Link to={'/workout'}><Button variant="dark">Workout Tracker</Button></Link></li>
+  <li><Link to={'/diet'}><Button variant="dark">Meal Log</Button></Link></li>
+  <li><Link to={'/workoutff'}><Button variant="dark">Workout Inspiration</Button></Link></li>
 </ul>
 
   </div>

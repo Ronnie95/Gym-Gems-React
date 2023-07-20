@@ -24,7 +24,7 @@ return(
         <ListGroup.Item>View hundreds of workouts</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/workoutff`}><Button variant="outline-dark">View</Button></Link></Card.Link>
+        <Link to={`/workoutff`}><Button variant="outline-dark">View</Button></Link>
       </Card.Body>
     </Card>
     <Card className='cards' style={{ width: '18rem' }}>
@@ -36,7 +36,7 @@ return(
         <ListGroup.Item>Track your meals here</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/diet`}><Button variant="outline-dark">View</Button></Link></Card.Link>
+        <Link to={`/diet`}><Button variant="outline-dark">View</Button></Link>
       </Card.Body>
     </Card>
     <Card className='cards' style={{ width: '18rem' }}>
@@ -48,7 +48,7 @@ return(
         <ListGroup.Item>Log your Workouts</ListGroup.Item>
       </ListGroup>
       <Card.Body>
-        <Card.Link href="#"> <Link to={`/workout`}><Button variant="outline-dark">View</Button></Link></Card.Link>
+       <Link to={`/workout`}><Button variant="outline-dark">View</Button></Link>
       </Card.Body>
     </Card>
     </div>
