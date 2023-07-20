@@ -18,7 +18,7 @@ function WorkoutEdit() {
 
     async function getWorkout() {
         try{
-            let myWorkouts = await fetch(`http://localhost:8000/api/workout/${workoutId}/`);
+            let myWorkouts = await fetch(`${process.env.REACT_APP_BASEURL}/api/workout/${workoutId}/`);
             myWorkouts = await myWorkouts.json()
             setEditWorkout(myWorkouts);
         } catch(err) {
@@ -42,7 +42,7 @@ function WorkoutEdit() {
         // console.log(editForm)
         try {
             e.preventDefault();
-            await fetch(`http://localhost:8000/api/workout/${workoutId}/`, {
+            await fetch(`${process.env.REACT_APP_BASEURL}/api/workout/${workoutId}/`, {
 
             method: "PUT",
             headers: {

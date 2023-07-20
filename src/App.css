@@ -94,7 +94,7 @@ color: burlywood;
 }
 
 .II{
-  width: 480px;
+  width: 500px;
   display: inline;
   border-radius: 8px;
   margin-bottom: auto;
@@ -118,7 +118,10 @@ p{
   width:50px;
 }
 
-
+.gympic {
+  margin-top: 100px;
+  display: flex;
+}
 
 
 
@@ -183,4 +186,19 @@ color: #282c34;
 .ffz {
   align-items: center;
   display: inline;
+}
+
+.card3{
+  margin-top: 100px;
+  display: flex;
+    justify-content: space-around;
+}
+
+.navbar li{
+display: inline;
+
+}
+
+.navbar ul {
+  background-color: black;
 }

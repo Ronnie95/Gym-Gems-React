@@ -20,7 +20,7 @@ const Diet = (props) =>{
     })
     const [diet, setDiet] = useState([])
 
-		const BASE_URL = "http://localhost:8000/api/";
+		const BASE_URL = `${process.env.REACT_APP_BASEURL}/api/`;
 
     const getDiet = async () => {
         try {
@@ -47,7 +47,7 @@ const Diet = (props) =>{
         // prevent reloading
         e.preventDefault();
         try{
-            const myDiet = await fetch(`http://localhost:8000/api/`, {
+            const myDiet = await fetch(`${process.env.REACT_APP_BASEURL}/api/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

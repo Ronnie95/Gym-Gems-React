@@ -7,15 +7,14 @@ function Home() {
 return( 
 
     <>
-    <div>
+    <div className='gympic'>
     <img className='II'src="/images/gym1.jpg" alt="" /> 
    <img className='II' src="/images/gym2.jpg" alt="" /> 
    <img className='II' src="/images/gym3.jpg" alt="" /> 
-
-
-
     </div>
-     <Card className='cards' style={{ width: '18rem' }}>
+
+    <div className='card3'>
+        <Card className='cards' style={{ width: '18rem' }}>
       <Card.Img variant="top" src="/images/gym5.jpg" alt="" />
       <Card.Body>
         <Card.Title>Workout Inspiration</Card.Title>
@@ -52,6 +51,8 @@ return(
         <Card.Link href="#"> <Link to={`/workout`}><Button variant="outline-dark">View</Button></Link></Card.Link>
       </Card.Body>
     </Card>
+    </div>
+     
   </>
 
 

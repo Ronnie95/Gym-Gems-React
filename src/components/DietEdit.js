@@ -12,7 +12,7 @@ function DietEdit() {
 
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/${dietId}/`);
+            let myDiets = await fetch(`${process.env.REACT_APP_BASEURL}/api/${dietId}/`);
             myDiets = await myDiets.json()
             setEditDiet(myDiets);
         } catch(err) {

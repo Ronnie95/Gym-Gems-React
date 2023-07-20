@@ -9,7 +9,7 @@ function WorkoutDelete() {
         //console.log("fi")
         try {
             // Make an API call to the DELETE route!
-            await fetch(`http://localhost:8000/api/workout/${workoutId}/`, {
+            await fetch(`${process.env.REACT_APP_BASEURL}/api/workout/${workoutId}/`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": "application/json"

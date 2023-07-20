@@ -18,7 +18,7 @@ const Workouts = (props) =>{
     })
     const [workout, setWorkout] = useState([])
 
-		const BASE_URL = "http://localhost:8000/api/workout/";
+		const BASE_URL = `${process.env.REACT_APP_BASEURL}/api/workout/`;
 
     const getWorkout = async () => {
         try {
@@ -45,7 +45,7 @@ const Workouts = (props) =>{
         // prevent reloading
         e.preventDefault();
         try{
-            const myWorkout = await fetch(`http://localhost:8000/api/workout/`, {
+            const myWorkout = await fetch(`${process.env.REACT_APP_BASEURL}/api/workout/`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

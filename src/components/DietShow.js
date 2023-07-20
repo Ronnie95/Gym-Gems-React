@@ -8,7 +8,7 @@ function DietShow () {
     console.log(dietId)
     async function getDiets() {
         try{
-            let myDiets = await fetch(`http://localhost:8000/api/${dietId}/`, {
+            let myDiets = await fetch(`${process.env.REACT_APP_BASEURL}/api/${dietId}/`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json"
@@ -29,7 +29,7 @@ function DietShow () {
          return(
             <>
              <div className="do">
-                <h1 classname="title1"> My Diet</h1>
+                <h1 classname="title1"> My Meals for: {diets.date}</h1>
                 
                 <ul>
                     <li className="show">{diets.breakfast}</li>
