@@ -29,7 +29,7 @@ function DietShow () {
          return(
             <>
              <div className="do">
-                <h1 classname="title1"> My Meals for: {diets.date}</h1>
+                <h1 className="title1"> My Meals for: {diets.date}</h1>
                 
                 <ul>
                     <li className="show">{diets.breakfast}</li>
