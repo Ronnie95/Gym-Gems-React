@@ -15,7 +15,7 @@ function ApiNinja () {
         headers: {
             'X-RapidAPI-Key': '05c0b0e6c5msh734830410de9d06p10e087jsn21bf4d482e73',
             'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
-        }
+        },
     };
     async function appp() {
 
